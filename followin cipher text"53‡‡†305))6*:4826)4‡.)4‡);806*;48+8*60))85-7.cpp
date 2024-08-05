@@ -22,7 +22,7 @@ void decryptMessage(char text[], char mapping[]) {
 }
 
 int main() {
-    char ciphertext[] = "53‡‡†305))6*:4826)4‡.)4‡);806*;48+8*60))85;;]8*::*8+83 (88)5*†:46(:88*96*?:8)*‡(:485);5*†2:*‡(:4956*2(5-4)88*4069285):)6+8)4‡‡:1($9:48081:8:811:48+85;4)485+528806*81 ($9:48:(88;4(‡?34:48)41:161::188:‡?;";
+    char ciphertext[] = "53â€¡â€¡â€ 305))6*:4826)4â€¡.)4â€¡);806*;48+8*60))85;;]8*::*8+83 (88)5*â€ :46(:88*96*?:8)*â€¡(:485);5*â€ 2:*â€¡(:4956*2(5-4)88*4069285):)6+8)4â€¡â€¡:1($9:48081:8:811:48+85;4)485+528806*81 ($9:48:(88;4(â€¡?34:48)41:161::188:â€¡?;";
     int freq[26] = {0};
     char mapping[26];
     for (int i = 0; i < 26; i++) {
@@ -50,7 +50,7 @@ int main() {
     decryptMessage(decryptedText, mapping);
 
     printf("Initial Decryption Attempt: \n%s\n", decryptedText);
-    mapping['‡' - 'A'] = 'E';
+    mapping['â€¡' - 'A'] = 'E';
     mapping['4' - 'A'] = 'H';
     printMapping(mapping);
     strcpy(decryptedText, ciphertext);
